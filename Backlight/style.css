@@ -1,0 +1,32 @@
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.backlight {
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.backlight:after {
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    filter: blur(20px);
+    transform: scale(2);
+    z-index: -1;
+}
