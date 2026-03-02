@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+details{
+    width: 50px;
+    transition: width 0.3s ease;
+    height: 200px;
+    border: 1px solid #6ab0ff;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    &:open{
+        width: 200px;
+        transition: width 0.3s ease;
+        summary{
+            min-width: unset;
+        }
+    }
+    summary{
+        min-width: 50px;
+        &::marker{
+            content: "";
+        }
+    }
+    div{
+        height: -webkit-fill-available;
+        display: flex;
+    }
+    p{
+        margin: 0;
+        padding: 10px 10px 10px 0;
+        color: #fff;
+        align-self: flex-end;
+        text-shadow: 1px 1px 0px #000;
+    }
+}
