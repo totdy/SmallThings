@@ -1,0 +1,47 @@
+nav {
+    position: relative;
+}
+
+nav::after {
+    content: "";
+    background: pink;
+    border: 2px solid deeppink;
+    box-shadow: inset 0 0 12px pink;
+
+    border-radius: 2rem;
+    corner-shape: squircle;
+
+    position: absolute;
+    position-anchor: --active-nav;
+    left: anchor(left);
+    right: anchor(right);
+    top: anchor(top);
+    bottom: anchor(bottom);
+
+    z-index: -1;
+
+    transition: inset 500ms;
+}
+
+nav a:is(:hover, :focus){
+    anchor-name: --active-nav;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+ul{
+    anchor-name: --active-nav;
+
+    list-style: none;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
